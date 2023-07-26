@@ -114,7 +114,6 @@ struct Node
 int kthAncestor(Node *root, int k, int node)
 {int z;
    queue<Node*>q;
-  // vector<int>v;
   
   map<int,int>m;
    q.push(root);
@@ -122,7 +121,7 @@ int kthAncestor(Node *root, int k, int node)
 
   while(!q.empty())
    { int size=q.size();
-      //vector<int>row(size);
+     
       for(int i=0;i<size;i++)
       {   
           Node* node1 =q.front();
@@ -139,10 +138,7 @@ int kthAncestor(Node *root, int k, int node)
           q.push(node1->right);
       }
     }
-     /* for(auto x: row)
-      {
-          v.push_back(x);
-      }*/
+    
    }
    
    for(int i=0;i<k;i++)
