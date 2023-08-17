@@ -30,7 +30,7 @@ class Solution{
        {
            if(a[i+1]==a[i]+1)
          {
-             c++; //v.push_back(c);
+             c++;
              
          }
            else
