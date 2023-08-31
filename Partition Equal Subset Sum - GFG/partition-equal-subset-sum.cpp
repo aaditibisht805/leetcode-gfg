@@ -10,49 +10,12 @@ using namespace std;
 class Solution{
 public:
 
-
-/*void solve(int i, int sum ,  int arr[], vector<int>& m, int n) {
-    if (i >= n) {
-       
-        m.push_back(sum);
-        return;
-    }
-  
-    
-    
-   
-    solve( i+1,sum+ arr[i], arr, m, n);
- 
-    solve( i + 1, sum, arr, m, n);
-}
-
-int equalPartition(int N, int arr[]) {
-   vector<int> m; //vector<int>dp(N+1, -1);
-   // map<int, int> m;
-
-    solve(0, 0, arr, m, N);
-    int s=0, c=0;
-    for(int i=0; i< m.size();i++)
-    s+= m[i];
-    int x= s/2;
-    if(m.size()%2!=0)
-    return 0;
-    for(int i=0;i< m.size();i++)
-    {
-        if(m[i]== x)
-      
-        return 1;
-    }
-
-    return 0;
-}
-*/
-
 bool solve(int i, int sum, int arr[], int n, vector<vector<int>>& dp) {
     if (sum == 0) {
         return true;
-    }
-    if (i >= n || sum < 0) {
+       
+}
+    if(i>=n|| sum < 0) {
         return false;
     }
     
@@ -81,10 +44,6 @@ bool equalPartition(int N, int arr[]) {
 
     return solve(0, targetSum, arr, N, dp);
 }
-
-
-
-
 
 };
 
