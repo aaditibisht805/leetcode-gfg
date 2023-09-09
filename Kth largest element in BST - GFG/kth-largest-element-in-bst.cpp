@@ -102,15 +102,14 @@ class Solution
         if(root==0)
         return 0;
         else
-        {
-            int left=inorder(root->right, k, c);
+        {   int right= inorder(root->right, k, c);
             c++;
             if(c==k)
             {
                 return root->data;
             }
-           int right=  inorder(root->left, k, c);      
-           if(left!=0)
+            int left=  inorder(root->left, k, c);      
+          if(left!=0)
            return left;
            else
            return right;
